@@ -43,6 +43,19 @@ app.get("/posts/:id",(req,res)=>{
     console.log(post)
     res.render("show.ejs",{post})
 })
+app.get("/posts/:id/edit",(req,res)=>{
+    let {id} = req.params;
+    let post = posts.find((p)=>id===p.id)
+
+})
+app.patch("/posts/:id",(req,res)=>{
+    let {id} = req.params;
+    let newContent = req.body.content;
+    let post = posts.find((p)=>id===p.id);
+    post.content = newContent;
+    console.log(post)
+    res.send("patch request working")
+})
 app.post("/posts",(req,res)=>{
     let {username,content} = req.body;
     let id = uuidv4();
