@@ -1,0 +1,16 @@
+{
+  "name": "basic_qura",
+  "version": "1.0.0",
+  "description": "It's a basic qura application which has basic features of qura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankur Bansal",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "uuid": "^10.0.0"
+  }
+}
